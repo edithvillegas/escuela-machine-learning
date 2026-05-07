@@ -1,5 +1,5 @@
 title: Escuela de Machine Learning
-description: Sitio web de la escuela de Machine Learning
+description: Sitio web de la Escuela de Machine Learning
 url: "https://edithvillegas.github.io"
 baseurl: "/escuela-machine-learning"
 
@@ -7,3 +7,47 @@ plugins:
   - jekyll-include-cache
 
 remote_theme: "DigitaleGesellschaft/jekyll-theme-conference@v4.0.2"
+
+conference:
+  lang: es
+  show_errors: true
+
+  navigation:
+    links:
+      - name: Programa
+        relative_url: /program/
+      - name: Ponentes
+        relative_url: /speakers/
+
+  talks:
+    main_categories:
+      - name: Charlas
+        color: info
+
+collections:
+  talks:
+    output: true
+    permalink: /:collection/:title/
+  speakers:
+    output: true
+    permalink: /:collection/:title/
+  rooms:
+    output: true
+    permalink: /:collection/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
+  - scope:
+      path: ""
+      type: speakers
+    values:
+      layout: speaker
+  - scope:
+      path: ""
+      type: rooms
+    values:
+      layout: room
