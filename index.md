@@ -1,6 +1,10 @@
 ---
 layout: home
-title: Home
+title: Inicio
+links:
+  - name: Ver Programa
+    relative_url: /program/
 ---
 
-Welcome to my conference website!
+Bienvenidos a la **Escuela de Machine Learning**. 
+Aquí encontrarás el programa, los ponentes y toda la información del evento.
